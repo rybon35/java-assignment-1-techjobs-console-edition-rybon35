@@ -101,7 +101,8 @@ public class JobData {
             for (String term : row.values()) {
                 //System.out.println(term);
 
-                if (row.containsValue(term)) {
+                boolean lowerCase = term.equalsIgnoreCase(value);
+                if (lowerCase) {
                     jobs.add(row);
                 }
 
